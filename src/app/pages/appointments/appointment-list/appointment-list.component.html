@@ -1,0 +1,21 @@
+<h2>Appointment List</h2>
+
+<div *ngIf="loading">Loading appointments...</div>
+
+<table *ngIf="!loading && appointments.length > 0">
+  <tr>
+    <th>ID</th>
+    <th>User ID</th>
+    <th>Appointment Time</th>
+    <th>Status</th>
+  </tr>
+
+  <tr *ngFor="let app of appointments">
+    <td>{{ app.id }}</td>
+    <td>{{ app.userId }}</td>
+    <td>{{ app.appointmentTime | date:'short' }}</td>
+    <td>{{ app.status }}</td>
+  </tr>
+</table>
+
+<p *ngIf="!loading && appointments.length === 0">No appointments found.</p>

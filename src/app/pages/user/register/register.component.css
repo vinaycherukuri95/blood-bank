@@ -1,0 +1,108 @@
+/* Container styling */
+.auth-container {
+  width: 380px;
+  margin: 60px auto;
+  padding: 45px 35px;
+  background: linear-gradient(135deg, #ff6b81, #ff4b5c, #ffe3e3);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  animation: slideFade 0.8s ease-in-out;
+}
+
+/* Headings */
+.auth-container h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Form inputs */
+.auth-container input {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.auth-container input:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Button styling */
+.auth-container button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  color: #e63946;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-container button:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(255, 75, 92, 0.3);
+}
+
+/* Success and Error messages */
+.success {
+  color: #2ecc71;
+  background: rgba(46, 204, 113, 0.2);
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.error {
+  color: #ffebee;
+  background: rgba(255, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Links */
+.auth-container p {
+  margin-top: 22px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.auth-container a {
+  color: #ffe3e3;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.auth-container a:hover {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes slideFade {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .auth-container {
+    width: 90%;
+    padding: 35px 20px;
+  }
+}

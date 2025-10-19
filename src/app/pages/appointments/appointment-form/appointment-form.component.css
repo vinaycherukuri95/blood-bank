@@ -1,0 +1,90 @@
+/* Container styling */
+form {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 40px 35px;
+  background: linear-gradient(135deg, #ff6b81, #ff4b5c, #ffe3e3);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins', sans-serif;
+  animation: slideFade 0.8s ease-in-out;
+}
+
+/* Heading */
+form h2 {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* Labels */
+form label {
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Inputs */
+form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Button styling */
+form button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  color: #e63946;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(255, 75, 92, 0.3);
+}
+
+/* Message styling */
+p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* Animation */
+@keyframes slideFade {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  form {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}

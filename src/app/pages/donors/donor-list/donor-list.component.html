@@ -1,0 +1,29 @@
+<h2>Donor List</h2>
+
+<p>
+     <a routerLink="/donors">Donors</a> |
+     <a routerLink="/donor/new">Add Donor</a> |
+     <a routerLink="/appointments">Appointments</a> |
+     <a routerLink="/appointments/new">New Appointment</a>
+</p>
+
+<div *ngIf="loading">Loading donors...</div>
+
+<table *ngIf="!loading && donors.length > 0">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Blood Group</th>
+    <th>Phone</th>
+    <th>Last Donation</th>
+  </tr>
+  <tr *ngFor="let donor of donors">
+    <td>{{ donor.id }}</td>
+    <td>{{ donor.name }}</td>
+    <td>{{ donor.bloodGroup }}</td>
+    <td>{{ donor.phone }}</td>
+    <td>{{ donor.lastDonationDate }}</td>
+  </tr>
+</table>
+
+<p *ngIf="!loading && donors.length === 0">No donors found.</p>

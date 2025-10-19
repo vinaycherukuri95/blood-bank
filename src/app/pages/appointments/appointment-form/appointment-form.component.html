@@ -1,0 +1,20 @@
+<h2>Book Appointment</h2>
+
+<form (ngSubmit)="saveAppointment()">
+  <label>User ID</label>
+  <input type="number" [(ngModel)]="appointment.userId" name="userId" required />
+
+  <label>Appointment Time</label>
+  <input type="datetime-local" [(ngModel)]="appointment.appointmentTime" name="appointmentTime" required />
+
+  <label>Status</label>
+  <select [(ngModel)]="appointment.status" name="status">
+    <option value="PENDING">Pending</option>
+    <option value="CONFIRMED">Confirmed</option>
+    <option value="CANCELLED">Cancelled</option>
+  </select>
+
+  <button type="submit">Save Appointment</button>
+</form>
+
+<p *ngIf="message">{{ message }}</p>
