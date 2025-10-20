@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { DonorService } from '../../../services/donor.service';
+import { ActivatedRoute } from '@angular/router';
+import { Donor } from '../../../models/donor';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-donor-form',
@@ -12,30 +15,48 @@ import { DonorService } from '../../../services/donor.service';
   templateUrl: './donor-form.component.html',
   styleUrls: ['./donor-form.component.css']
 })
+
 export class DonorFormComponent {
-  donor = {
+
+  message: string = '';
+  donor: Donor = {
+    id:undefined,
     name: '',
     bloodGroup: '',
     phone: '',
-    lastDonationDate: ''
+    lastDonationDate: '',
+    age: undefined,
+    city: ''
   };
 
-  message = '';
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private donorService: DonorService
+  ) {}
 
-  constructor(private donorService: DonorService) {
-    console.log('initializes DonorFormComponent');
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      const id = +params['id'];
+      
+    });
   }
+
+
   
-  saveDonor() {
+  
+
+ saveDonor() {
     this.donorService.create(this.donor).subscribe({
-      next: () => {
-        this.message = 'Donor added successfully!';
-        this.donor = { name: '', bloodGroup: '', phone: '', lastDonationDate: '' };
+      next: (response) => {
+        console.log('Server Response:', response);
+        alert('Donor saved successfully!');
       },
-      error: (err) => {
-        console.error(err);
-        this.message = 'Failed to add donor.';
+      error: (error) => {
+        console.error('Error:', error);
+        alert('Failed to save donor!');
       }
     });
   }
+  
 }

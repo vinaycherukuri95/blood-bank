@@ -9,7 +9,7 @@ import { User } from '../models/user';
 })
 export class AuthService {
 
-  private base = 'http://192.168.1.9:8080/api/auth';
+  private base = 'http://192.168.1.7:8080/api/auth';
 
   constructor(private http: HttpClient) {}
 

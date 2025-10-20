@@ -1,9 +1,9 @@
 export interface Donor {
-  id?: number;
-  name: string;
-  bloodGroup: string;
-  city: string;
-  phone: string;
-  email: string;
+  id?: number;  // <-- optional
+  name?: string;
+  bloodGroup?: string;
+  phone?: string;
+  lastDonationDate?: string;
+  age?: number;
+  city?: string;
 }
-

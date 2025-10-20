@@ -11,7 +11,9 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'donors', component: DonorListComponent },
-  { path: 'donor/new', component: DonorFormComponent },
+  { path: 'donor', component: DonorFormComponent },
+  { path: 'donor/:id', component: DonorFormComponent },   
   { path: 'appointments', component: AppointmentListComponent },
   { path: 'appointments/new', component: AppointmentFormComponent }
 ];
+

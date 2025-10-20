@@ -13,6 +13,12 @@
   <label>Last Donation Date</label>
   <input type="date" [(ngModel)]="donor.lastDonationDate" name="lastDonationDate" />
 
+  <label>Age</label>
+  <input type="text" [(ngModel)]="donor.age" name="age" required>
+
+  <label>City</label>
+  <input type="text" [(ngModel)]="donor.city" name="city" required>
+
   <button type="submit">Save Donor</button>
 </form>
 
